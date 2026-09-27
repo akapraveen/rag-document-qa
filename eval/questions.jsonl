@@ -1,0 +1,22 @@
+{"q": "What is the base target price for Entrata?", "sources": ["entrata-equity-initiation.md", "entrata-equity-initiation-report.pdf"], "expect": "16.50"}
+{"q": "What EV/Revenue multiple was selected for Entrata's 2026E valuation?", "sources": ["entrata-equity-initiation.md", "entrata-equity-initiation-report.pdf"], "expect": "5.7"}
+{"q": "What is Entrata's net revenue retention?", "sources": ["entrata-equity-initiation.md", "entrata-equity-initiation-report.pdf"], "expect": "117%"}
+{"q": "How many Entrata customers have ARR above $500K?", "sources": ["entrata-equity-initiation.md", "entrata-equity-initiation-report.pdf"], "expect": "233"}
+{"q": "How is the FX_Key created to link FX rates with Actuals and Budget?", "sources": ["opex-currency-conversion-approach.pdf"], "expect": "MonthStart"}
+{"q": "What type of relationship links the monthly FX table to the fact tables?", "sources": ["opex-currency-conversion-approach.pdf"], "expect": "Many-To-One"}
+{"q": "In the OPEX dashboard, what does a positive variance mean?", "sources": ["opex-currency-conversion-approach.pdf"], "expect": "overspend"}
+{"q": "What share of defaulted balance does the expected-loss ranking reach at 20% capacity?", "sources": ["credit-default-risk.md"], "expect": "77.4"}
+{"q": "What test AUC did gradient boosting reach on the credit card default data?", "sources": ["credit-default-risk.md"], "expect": "0.780"}
+{"q": "Why is call duration excluded from the bank campaign model?", "sources": ["bank-campaign-targeting.md"], "expect": "after the call"}
+{"q": "What AUC did walk-forward retraining achieve for the term-deposit model?", "sources": ["bank-campaign-targeting.md"], "expect": "0.757"}
+{"q": "What conversion rate does calling the top 10% of the ranked list achieve?", "sources": ["bank-campaign-targeting.md"], "expect": "74"}
+{"q": "By how much does the blended forecast miss 4-week revenue on average?", "sources": ["retail-revenue-forecast.md"], "expect": "9.4"}
+{"q": "How many invoice lines are in the Online Retail II data?", "sources": ["retail-revenue-forecast.md"], "expect": "1,067,371"}
+{"q": "What happened to purchase tracking on 15 November 2019?", "sources": ["ecommerce-clickstream-analytics.md"], "expect": "5.7M views"}
+{"q": "What share of revenue comes from repeat buyers in the clickstream data?", "sources": ["ecommerce-clickstream-analytics.md"], "expect": "66%"}
+{"q": "How many rejected loan applications are in the Lending Club data?", "sources": ["lending-club-loan-selection.md"], "expect": "27,648,741"}
+{"q": "What realised return did the model's top 20% of 2015 loans achieve?", "sources": ["lending-club-loan-selection.md"], "expect": "2.91"}
+{"q": "Which sub-grade has the peak realised return?", "sources": ["lending-club-loan-selection.md"], "expect": "B4"}
+{"q": "How many signals does Pulse use to rank clients?", "sources": ["pulse-next-best-action.md", "pulse-case-study.md"], "expect": "13"}
+{"q": "What share of AUM has not heard from an RM in 60 or more days?", "sources": ["pulse-next-best-action.md", "pulse-case-study.md"], "expect": "12.9"}
+{"q": "Which database engine does Pulse run its signal SQL on?", "sources": ["pulse-next-best-action.md", "pulse-case-study.md"], "expect": "DuckDB"}

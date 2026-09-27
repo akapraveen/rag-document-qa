@@ -1,0 +1,167 @@
+{
+ "corpus": {
+  "documents": 10,
+  "chunks": 78,
+  "questions": 22,
+  "embedding_model": "BAAI/bge-small-en-v1.5"
+ },
+ "retrieval": {
+  "vector": {
+   "hit@1": 0.909,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.947
+  },
+  "bm25": {
+   "hit@1": 0.955,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.977
+  },
+  "hybrid": {
+   "hit@1": 0.909,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.955
+  }
+ },
+ "answers": {
+  "provider": "ollama (llama3.2:3b)",
+  "accuracy": 0.864,
+  "seconds": 125.6,
+  "rows": [
+   {
+    "q": "What is the base target price for Entrata?",
+    "expect": "16.50",
+    "correct": true,
+    "answer": "The base target price for Entrata is $16.50 per share, as stated in passage [1] and confirmed in passage [3] as $16.50."
+   },
+   {
+    "q": "What EV/Revenue multiple was selected for Entrata's 2026E valuation?",
+    "expect": "5.7",
+    "correct": false,
+    "answer": "[1]"
+   },
+   {
+    "q": "What is Entrata's net revenue retention?",
+    "expect": "117%",
+    "correct": true,
+    "answer": "[3] (entrata-equity-initiation-report.pdf, page 10)\nUpside Catalysts\nARPU Expansion\nELI+, embedded products,\npayments \u2014 modelled well\nbelow peak benchmark\nEnterprise\nPenetration\nContinued wins in the\n>$500K ARR cohort expand\nrevenue durability\nAI Monetisation\nELI+ layered on existing installed base with minimal incremental\nCAC\nKey Risks to Monitor\nGross Retention\nDecline from 99% \u2192 97% warrants post-IPO monitoring\n... (117% net retention)"
+   },
+   {
+    "q": "How many Entrata customers have ARR above $500K?",
+    "expect": "233",
+    "correct": true,
+    "answer": "According to passage [1] (entrata-equity-initiation-report.pdf, page 2), 233 Entrata customers have ARR above $500K, representing 84% of total ARR."
+   },
+   {
+    "q": "How is the FX_Key created to link FX rates with Actuals and Budget?",
+    "expect": "MonthStart",
+    "correct": true,
+    "answer": "The FX_Key is created using the formula: Currency + \"|\" + MonthStart. [1]"
+   },
+   {
+    "q": "What type of relationship links the monthly FX table to the fact tables?",
+    "expect": "Many-To-One",
+    "correct": true,
+    "answer": "The relationship between the monthly FX table and the fact tables is a Many-To-One relationship, with a single direction, and an active relationship."
+   },
+   {
+    "q": "In the OPEX dashboard, what does a positive variance mean?",
+    "expect": "overspend",
+    "correct": true,
+    "answer": "According to passage [1], a positive variance in the OPEX dashboard means that the Actual INR is higher than the Budget INR, which indicates an overspend."
+   },
+   {
+    "q": "What share of defaulted balance does the expected-loss ranking reach at 20% capacity?",
+    "expect": "77.4",
+    "correct": true,
+    "answer": "[3] (pulse-next-best-action.md)\n| Ranking | Defaulted balance captured | Defaulters captured | Hit rate |\n|---|---|---|---|\n| **Model: expected loss (PD \u00d7 balance)** | **77.4%** | 34.6% | 38.2% |"
+   },
+   {
+    "q": "What test AUC did gradient boosting reach on the credit card default data?",
+    "expect": "0.780",
+    "correct": true,
+    "answer": "[2] (credit-default-risk.md) [3] (bank-campaign-targeting.md)\n\nGradient boosting reached a test AUC of **0.780** on the credit card default data."
+   },
+   {
+    "q": "Why is call duration excluded from the bank campaign model?",
+    "expect": "after the call",
+    "correct": true,
+    "answer": "[2] (bank-campaign-targeting.md) states that `duration` is only known after the call ends, so it can't be used to decide whom to call."
+   },
+   {
+    "q": "What AUC did walk-forward retraining achieve for the term-deposit model?",
+    "expect": "0.757",
+    "correct": true,
+    "answer": "[2] (bank-campaign-targeting.md)\n## Why the evaluation setup matters\n\n| Setup | AUC |\n|---|---|\n| Walk-forward: retrained before each of 5 test blocks | **0.757** |"
+   },
+   {
+    "q": "What conversion rate does calling the top 10% of the ranked list achieve?",
+    "expect": "74",
+    "correct": false,
+    "answer": "According to passage [5], calling the top 10% of the ranked list achieves a conversion rate of 55.0%."
+   },
+   {
+    "q": "By how much does the blended forecast miss 4-week revenue on average?",
+    "expect": "9.4",
+    "correct": true,
+    "answer": "The blended forecast misses 4-week revenue on average by 9.4%. [2]"
+   },
+   {
+    "q": "How many invoice lines are in the Online Retail II data?",
+    "expect": "1,067,371",
+    "correct": true,
+    "answer": "[1] The Online Retail II data contains 1,067,371 invoice lines."
+   },
+   {
+    "q": "What happened to purchase tracking on 15 November 2019?",
+    "expect": "5.7M views",
+    "correct": true,
+    "answer": "According to passage [1], on 15 November, the log has 5.7M views and zero purchases."
+   },
+   {
+    "q": "What share of revenue comes from repeat buyers in the clickstream data?",
+    "expect": "66%",
+    "correct": true,
+    "answer": "[2] (ecommerce-clickstream-analytics.md)\n| | |\n|---|---|\n| Repeat buyers | **30%** of the 697,470 buyers bought on 2+ days, and they bring **66%** of revenue |"
+   },
+   {
+    "q": "How many rejected loan applications are in the Lending Club data?",
+    "expect": "27,648,741",
+    "correct": true,
+    "answer": "[2] mentions that there are 27,648,741 rejected applications."
+   },
+   {
+    "q": "What realised return did the model's top 20% of 2015 loans achieve?",
+    "expect": "2.91",
+    "correct": false,
+    "answer": "[1]"
+   },
+   {
+    "q": "Which sub-grade has the peak realised return?",
+    "expect": "B4",
+    "correct": true,
+    "answer": "[1] \nRealised return peaks around B4 (3.1% a year) and falls away below grade D."
+   },
+   {
+    "q": "How many signals does Pulse use to rank clients?",
+    "expect": "13",
+    "correct": true,
+    "answer": "Pulse uses 13 signals to rank clients. [3]"
+   },
+   {
+    "q": "What share of AUM has not heard from an RM in 60 or more days?",
+    "expect": "12.9",
+    "correct": true,
+    "answer": "[1] states that **12.9% \u2014 \u20b9277 Cr, 46 clients** of AUM hasn't heard from an RM in 60+ days."
+   },
+   {
+    "q": "Which database engine does Pulse run its signal SQL on?",
+    "expect": "DuckDB",
+    "correct": true,
+    "answer": "According to passage [4], Pulse runs its signal SQL on DuckDB, which is connected to STORM's warehouse."
+   }
+  ]
+ }
+}

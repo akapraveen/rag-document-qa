@@ -1,0 +1,167 @@
+{
+ "corpus": {
+  "documents": 10,
+  "chunks": 78,
+  "questions": 22,
+  "embedding_model": "BAAI/bge-small-en-v1.5"
+ },
+ "retrieval": {
+  "vector": {
+   "hit@1": 0.909,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.947
+  },
+  "bm25": {
+   "hit@1": 0.955,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.977
+  },
+  "hybrid": {
+   "hit@1": 0.909,
+   "hit@3": 1.0,
+   "hit@5": 1.0,
+   "mrr": 0.955
+  }
+ },
+ "answers": {
+  "provider": "ollama (gemma3:1b)",
+  "accuracy": 0.636,
+  "seconds": 23.4,
+  "rows": [
+   {
+    "q": "What is the base target price for Entrata?",
+    "expect": "16.50",
+    "correct": true,
+    "answer": "$16.50/share"
+   },
+   {
+    "q": "What EV/Revenue multiple was selected for Entrata's 2026E valuation?",
+    "expect": "5.7",
+    "correct": true,
+    "answer": "5.7x"
+   },
+   {
+    "q": "What is Entrata's net revenue retention?",
+    "expect": "117%",
+    "correct": true,
+    "answer": "117%"
+   },
+   {
+    "q": "How many Entrata customers have ARR above $500K?",
+    "expect": "233",
+    "correct": true,
+    "answer": "233"
+   },
+   {
+    "q": "How is the FX_Key created to link FX rates with Actuals and Budget?",
+    "expect": "MonthStart",
+    "correct": true,
+    "answer": "To link FX rates with Actuals and Budget, I created a common key called FX_Key. It was created using:\nCurrency + MonthStart"
+   },
+   {
+    "q": "What type of relationship links the monthly FX table to the fact tables?",
+    "expect": "Many-To-One",
+    "correct": true,
+    "answer": "\u2022 Many-To-One"
+   },
+   {
+    "q": "In the OPEX dashboard, what does a positive variance mean?",
+    "expect": "overspend",
+    "correct": true,
+    "answer": "Positive variance means Actual INR is higher than Budget INR, which indicates overspend."
+   },
+   {
+    "q": "What share of defaulted balance does the expected-loss ranking reach at 20% capacity?",
+    "expect": "77.4",
+    "correct": true,
+    "answer": "77.4%"
+   },
+   {
+    "q": "What test AUC did gradient boosting reach on the credit card default data?",
+    "expect": "0.780",
+    "correct": true,
+    "answer": "0.780"
+   },
+   {
+    "q": "Why is call duration excluded from the bank campaign model?",
+    "expect": "after the call",
+    "correct": false,
+    "answer": "I couldn\u2019t find that in the documents."
+   },
+   {
+    "q": "What AUC did walk-forward retraining achieve for the term-deposit model?",
+    "expect": "0.757",
+    "correct": false,
+    "answer": "0.796"
+   },
+   {
+    "q": "What conversion rate does calling the top 10% of the ranked list achieve?",
+    "expect": "74",
+    "correct": false,
+    "answer": "6.0%"
+   },
+   {
+    "q": "By how much does the blended forecast miss 4-week revenue on average?",
+    "expect": "9.4",
+    "correct": false,
+    "answer": "32.9%"
+   },
+   {
+    "q": "How many invoice lines are in the Online Retail II data?",
+    "expect": "1,067,371",
+    "correct": false,
+    "answer": "I couldn't find that in the documents."
+   },
+   {
+    "q": "What happened to purchase tracking on 15 November 2019?",
+    "expect": "5.7M views",
+    "correct": false,
+    "answer": "The question asks what happened to purchase tracking on 15 November 2019."
+   },
+   {
+    "q": "What share of revenue comes from repeat buyers in the clickstream data?",
+    "expect": "66%",
+    "correct": false,
+    "answer": "I couldn\u2019t find that in the documents."
+   },
+   {
+    "q": "How many rejected loan applications are in the Lending Club data?",
+    "expect": "27,648,741",
+    "correct": true,
+    "answer": "27,648,741"
+   },
+   {
+    "q": "What realised return did the model's top 20% of 2015 loans achieve?",
+    "expect": "2.91",
+    "correct": true,
+    "answer": "2.91%"
+   },
+   {
+    "q": "Which sub-grade has the peak realised return?",
+    "expect": "B4",
+    "correct": false,
+    "answer": "3.16%"
+   },
+   {
+    "q": "How many signals does Pulse use to rank clients?",
+    "expect": "13",
+    "correct": true,
+    "answer": "13"
+   },
+   {
+    "q": "What share of AUM has not heard from an RM in 60 or more days?",
+    "expect": "12.9",
+    "correct": true,
+    "answer": "**12.9%**"
+   },
+   {
+    "q": "Which database engine does Pulse run its signal SQL on?",
+    "expect": "DuckDB",
+    "correct": true,
+    "answer": "The passages state that Pulse runs its signal SQL on DuckDB."
+   }
+  ]
+ }
+}
