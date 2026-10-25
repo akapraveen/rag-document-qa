@@ -66,14 +66,20 @@ if "chat" not in st.session_state:
     st.session_state.chat = []
 
 cols = st.columns(2)
-clicked = next((q for i, q in enumerate(EXAMPLES) if cols[i % 2].button(q, use_container_width=True)), None)
+pressed = [cols[i % 2].button(q, use_container_width=True) for i, q in enumerate(EXAMPLES)]
+clicked = next((q for q, hit in zip(EXAMPLES, pressed) if hit), None)
+
+
+def md(text: str) -> str:
+    """Escape $ so Streamlit doesn't render prices like $16.50 as LaTeX."""
+    return text.replace("$", "\\$")
 
 
 def render(turn: dict):
     with st.chat_message("user"):
-        st.write(turn["question"])
+        st.markdown(md(turn["question"]))
     with st.chat_message("assistant"):
-        st.write(turn["answer"])
+        st.markdown(md(turn["answer"]))
         t = turn["timings_ms"]
         st.caption(f"{turn['provider']} · {turn['mode']} retrieval {t['retrieval']} ms · generation {t['generation']} ms")
         with st.expander(f"Sources ({sum(s['cited'] for s in turn['sources'])} cited of {len(turn['sources'])} retrieved)"):
